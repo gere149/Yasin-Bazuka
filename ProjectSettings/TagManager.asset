@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3652275261
+    locked: 0
+  - name: Suelo
+    uniqueID: 1552114763
+    locked: 0
+  - name: Player
+    uniqueID: 1968176417
+    locked: 0
+  - name: Detalles
+    uniqueID: 1921765941
+    locked: 0
