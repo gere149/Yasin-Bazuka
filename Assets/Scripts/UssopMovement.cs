@@ -17,12 +17,14 @@ public class UssopMovement : MonoBehaviour
     public float Speed;
     public float JumpForce;
     private bool AlTerra;
+
+    private Animator Animator;
     
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        
+        Animator = GetComponent<Animator>();
 
     }
 
@@ -34,6 +36,8 @@ public class UssopMovement : MonoBehaviour
         Vector3 Movementnew = new Vector3(horizontal,0,0);
 
         transform.position += Movementnew * moveSpeed * Time.deltaTime;
+
+        Animator.SetBool("running", horizontal != 0.0f);
 
 
         Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
