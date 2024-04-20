@@ -13,6 +13,10 @@ public class UssopMovement : MonoBehaviour
     public float linearDrag;
     public Animator animator;
     public Transform position;
+
+    public float Speed;
+    public float JumpForce;
+    private bool AlTerra;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,27 @@ public class UssopMovement : MonoBehaviour
 
         transform.position += Movementnew * moveSpeed * Time.deltaTime;
 
+
+        Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
+        if(Physics2D.Raycast(transform.position, Vector3.down, 0.1f))
+        {
+            AlTerra = true;
+        }
+        else
+        {
+            AlTerra = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && AlTerra)
+        {
+            Jump();
+        }
+
+    }
+
+    private void Jump()
+    {
+        rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
 
 
