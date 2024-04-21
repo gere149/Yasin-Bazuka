@@ -10,14 +10,17 @@ public class IanaMov : MonoBehaviour
     private bool isFacingRight = true;
     private Animator Animator;
 
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    private Rigidbody2D rb;
+
+    private BoxCollider2D boxCollider;
+    private Transform groundCheck;
+    public LayerMask capaSuelo;
 
     void Start()
     {
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
     }
     void Update()
@@ -26,12 +29,12 @@ public class IanaMov : MonoBehaviour
         Animator.SetBool("running", horizontal != 0.0f);
         
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && EstaEnSuelo())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f && EstaEnSuelo())
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -54,5 +57,11 @@ public class IanaMov : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    bool EstaEnSuelo()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
+        return raycastHit.collider != null;
     }
 }
