@@ -16,6 +16,8 @@ public class IanaMov : MonoBehaviour
     private Transform groundCheck;
     public LayerMask capaSuelo;
 
+    Collider2D colldier;
+
     void Start()
     {
         Animator = GetComponent<Animator>();
@@ -27,6 +29,7 @@ public class IanaMov : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         Animator.SetBool("running", horizontal != 0.0f);
+        Animator.SetFloat("jumpVelocidad", rb.velocity.y);
         
 
         if (Input.GetButtonDown("Jump") && EstaEnSuelo())
@@ -40,6 +43,7 @@ public class IanaMov : MonoBehaviour
         }
 
         Flip();
+        //CheckForGround();
     }
 
     private void FixedUpdate()
@@ -64,4 +68,16 @@ public class IanaMov : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
         return raycastHit.collider != null;
     }
+
+    /*private void CheckForGround()
+    {
+        if (colldier.IsTouchingLayers(LayerMask.GetMask("suelo")))
+        {
+            Animator.SetBool("enSuelo", true);
+        }
+        else
+        {
+            Animator.SetBool("enSuelo", false);
+        }
+    }*/
 }
