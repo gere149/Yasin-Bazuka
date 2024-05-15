@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 517176210}
   - component: {fileID: 517176211}
   m_Layer: 0
-  m_Name: Personaje
+  m_Name: Iana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,14 +255,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831c0212cc9fc7d4eb2f98ecf8a8fa04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  horizontal: 0
   moveSpeed: 10
   direction: {x: 0, y: 0}
+  facingRight: 1
   maxSpeed: 100
   linearDrag: 0
   animator: {fileID: 0}
   position: {fileID: 0}
   Speed: 200
   JumpForce: 550
+  AlTerra: 0
+  Animator: {fileID: 0}
 --- !u!61 &517176206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -295,7 +300,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -0.002051115, y: -0.0061531663}
+  m_Offset: {x: -0.002051115, y: 0.49097237}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -306,7 +311,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14364266, y: 0.48413634}
+  m_Size: {x: 0.14364266, y: 0.5202909}
   m_EdgeRadius: 0
 --- !u!50 &517176207
 Rigidbody2D:
@@ -3632,8 +3637,9 @@ GameObject:
   - component: {fileID: 2022414012}
   - component: {fileID: 2022414011}
   - component: {fileID: 2022414010}
+  - component: {fileID: 2022414015}
   m_Layer: 0
-  m_Name: Idle_0
+  m_Name: Rumano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3793,12 +3799,32 @@ Transform:
   m_GameObject: {fileID: 2022414009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.307781, y: 10.978232, z: 0}
+  m_LocalPosition: {x: 11.79, y: 2, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022414015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022414009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f85fac2c088f24a8a112ebb24faa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rutina: 0
+  cronometro: 0
+  ani: {fileID: 2022414010}
+  direcction: 0
+  speed_walk: 1.5
+  speed_run: 3
+  target: {fileID: 517176204}
+  atacando: 0
 --- !u!1 &2049703762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,6 +3922,10 @@ PrefabInstance:
     - target: {fileID: 6313613188459593109, guid: d17640573ef5dbd44ae5c43200d46fd4, type: 3}
       propertyPath: m_Name
       value: Enemigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313613188459593109, guid: d17640573ef5dbd44ae5c43200d46fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7769411290990135611, guid: d17640573ef5dbd44ae5c43200d46fd4, type: 3}
       propertyPath: m_LocalPosition.x

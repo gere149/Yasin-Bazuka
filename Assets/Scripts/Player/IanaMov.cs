@@ -30,7 +30,7 @@ public class IanaMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         Animator.SetBool("running", horizontal != 0.0f);
         Animator.SetFloat("jumpVelocidad", rb.velocity.y);
-        
+
 
         if (Input.GetButtonDown("Jump") && EstaEnSuelo())
         {
@@ -62,12 +62,15 @@ public class IanaMov : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
+    
     bool EstaEnSuelo()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
         return raycastHit.collider != null;
     }
+
+
+}
 
     /*private void CheckForGround()
     {
@@ -80,4 +83,4 @@ public class IanaMov : MonoBehaviour
             Animator.SetBool("enSuelo", false);
         }
     }*/
-}
+
