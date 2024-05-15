@@ -255,19 +255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831c0212cc9fc7d4eb2f98ecf8a8fa04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody2D: {fileID: 0}
-  horizontal: 0
-  moveSpeed: 10
-  direction: {x: 0, y: 0}
-  facingRight: 1
-  maxSpeed: 100
-  linearDrag: 0
-  animator: {fileID: 0}
-  position: {fileID: 0}
-  Speed: 200
-  JumpForce: 550
-  AlTerra: 0
-  Animator: {fileID: 0}
 --- !u!61 &517176206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -299,7 +286,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: -0.002051115, y: 0.49097237}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
