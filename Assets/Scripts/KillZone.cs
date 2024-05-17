@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillZone : MonoBehaviour
+/*public class KillZone : MonoBehaviour
 {
     ObjectPool pool;
 
@@ -26,4 +26,4 @@ public class KillZone : MonoBehaviour
 
         pool.DestroyInstancedObject(other.gameObject);
     }
-}
+}*/
