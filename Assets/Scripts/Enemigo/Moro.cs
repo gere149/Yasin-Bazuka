@@ -152,7 +152,7 @@ public class Moro : MonoBehaviour
     }
     public void Final_Ani()
     {
-        ani.SetBool("attack",false);
+        ani.SetBool("Attack",false);
         atacando = false;
         rango.GetComponent<BoxCollider2D>().enabled = true;
     }

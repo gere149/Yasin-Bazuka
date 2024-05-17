@@ -2,18 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitMoro : MonoBehaviour
+public class Pool : MonoBehaviour
 {
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Iana"))
-        {
-            print("Da�o");
-        }
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
