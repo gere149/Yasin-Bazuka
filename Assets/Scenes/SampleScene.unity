@@ -394,7 +394,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 560066659}
-  - {fileID: 2022414014}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &517176210
@@ -445,9 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db3813dd3508934caee38223d40d308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controladorGolpe: {fileID: 560066659}
-  radioGolpe: 1
-  "da\xF1oGolpe": 30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,13 +4014,13 @@ Transform:
   m_GameObject: {fileID: 2022414009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99250007, y: -0.22249997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 16.95, y: -2.09, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1939308863}
   - {fileID: 1514750717}
-  m_Father: {fileID: 517176209}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2022414015
 MonoBehaviour:
@@ -4062,8 +4058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950cf17922e854d4480d603c35cd54a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 60
-  animator: {fileID: 0}
 --- !u!1 &2049703762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4211,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1157968515}
+  - {fileID: 2022414014}
   - {fileID: 517176209}
   - {fileID: 8753939412946776692}
   - {fileID: 2057316466}
