@@ -11,7 +11,7 @@ public class CombateIana : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetButtonDown("E"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Golpe();
         }
