@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 517176208}
   - component: {fileID: 517176207}
   - component: {fileID: 517176206}
-  - component: {fileID: 517176205}
   - component: {fileID: 517176210}
   - component: {fileID: 517176211}
   - component: {fileID: 517176212}
@@ -244,18 +243,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &517176205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517176204}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 831c0212cc9fc7d4eb2f98ecf8a8fa04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &517176206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -389,7 +376,7 @@ Transform:
   m_GameObject: {fileID: 517176204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.98, y: -1.2, z: 0}
+  m_LocalPosition: {x: 12.73, y: -1.15, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -441,9 +428,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 517176204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db3813dd3508934caee38223d40d308, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f66a660d8be41340be3f79b08388ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controladorGolpe: {fileID: 560066659}
+  radioGolpe: 1
+  "da\xF1oGolpe": 30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,9 +4045,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022414009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950cf17922e854d4480d603c35cd54a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 38cc4e38c00d63e46a40d863108181b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 60
 --- !u!1 &2049703762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4211,8 +4202,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1157968515}
-  - {fileID: 2022414014}
   - {fileID: 517176209}
+  - {fileID: 2022414014}
   - {fileID: 8753939412946776692}
   - {fileID: 2057316466}
   - {fileID: 1890387090}

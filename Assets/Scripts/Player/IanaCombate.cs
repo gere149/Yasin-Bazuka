@@ -10,7 +10,7 @@ public class IanaCombate : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("E"))
+        if (Input.GetButtonDown("Attack"))
         {
             Golpe();
         }
@@ -22,9 +22,9 @@ public class IanaCombate : MonoBehaviour
 
         foreach(Collider2D colisionador in objetos)
         {
-            if (colisionador.CompareTag("EnemigoVida"))
+            if (colisionador.CompareTag("VidaEnemigo"))
             {
-                colisionador.transform.GetComponent<EnemigoVida>().TomarDaño(dañoGolpe);
+                colisionador.transform.GetComponent<ControladorEnemigo>().TomarDaño(dañoGolpe);
             }
         }
     }

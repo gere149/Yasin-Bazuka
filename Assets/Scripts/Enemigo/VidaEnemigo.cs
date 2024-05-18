@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class ControladorEnemigo : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private float vida;
+    private Animator animator;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TomarDaño(float daño)
     {
-        
+        vida -= daño;
+
+        if(vida <= 0)
+        {
+            Muerte();
+        }
     }
+    
+    private void Muerte()
+    {
+        animator.SetTrigger("Muerte");
+    }
+
 }
