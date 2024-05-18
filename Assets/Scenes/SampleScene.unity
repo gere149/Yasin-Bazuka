@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 517176212}
   m_Layer: 0
   m_Name: Iana
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3685,6 +3685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ani: {fileID: 2022414010}
   enemigo: {fileID: 2022414015}
+  llamar: {fileID: 0}
 --- !u!61 &1939308865
 BoxCollider2D:
   m_ObjectHideFlags: 0

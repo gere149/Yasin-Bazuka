@@ -7,7 +7,7 @@ public class HitMoro : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Iana"))
+        if (collision.CompareTag("Player"))
         {
             print("Da�o");
         }
