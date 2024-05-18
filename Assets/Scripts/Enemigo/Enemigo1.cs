@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ public class Enemigo1 : MonoBehaviour
     public float cronometro;
     public Animator ani;
     public int direcction;
-    public float speed_walk;
     public float speed_run;
     public GameObject target;
     public bool atacando;
@@ -19,6 +19,7 @@ public class Enemigo1 : MonoBehaviour
     public float rango_ataque;
     public GameObject rango;
     public GameObject Hit;
+    [SerializeField] private float vida;
 
     void Start()
     {
@@ -71,6 +72,22 @@ public class Enemigo1 : MonoBehaviour
         } 
        
     }
+    public void TomarDaño(float daño)
+    {
+        vida -= daño;
+
+        if(vida <= 0)
+        {
+            Muerte();
+        }
+    }
+    
+    private void Muerte()
+    {
+        ani.SetTrigger("Muerte");
+        Destroy(this.GameObject());
+    }
+
     private void Final_Ani()
     {
         ani.SetBool("Attack",false);

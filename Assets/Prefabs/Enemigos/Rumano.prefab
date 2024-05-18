@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7966823743093003825}
   m_Layer: 0
   m_Name: Rumano
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,6 @@ MonoBehaviour:
   cronometro: 0
   ani: {fileID: 5420441918578096809}
   direcction: 0
-  speed_walk: 1.5
   speed_run: 3
   target: {fileID: 0}
   atacando: 0
@@ -208,6 +207,7 @@ MonoBehaviour:
   rango_ataque: 50
   rango: {fileID: 8258053801465088962}
   Hit: {fileID: 6578808837781914812}
+  vida: 0
 --- !u!114 &7966823743093003825
 MonoBehaviour:
   m_ObjectHideFlags: 0
