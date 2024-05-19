@@ -22,6 +22,8 @@ public class IanaVida : MonoBehaviour
         if(vida <= 0)
         {
             Muerte();
+            Destroy(this.GameObject(), 2);
+
         }
         else
         {
