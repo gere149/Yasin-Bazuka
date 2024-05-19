@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemigo1 : MonoBehaviour
@@ -27,7 +27,6 @@ public class Enemigo1 : MonoBehaviour
     void Update()
     {
         Comportamientos();
-        Debug.Log(atacando);
     }
 
     public void Comportamientos()
