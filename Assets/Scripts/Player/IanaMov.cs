@@ -30,6 +30,7 @@ public class IanaMov : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         Animator.SetBool("running", horizontal != 0.0f);
         Animator.SetFloat("jumpVelocidad", rb.velocity.y);
+        Attack();
 
 
         if (Input.GetButtonDown("Jump") && EstaEnSuelo())
@@ -69,7 +70,18 @@ public class IanaMov : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-
+    
+    public void Attack()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Animator.SetBool("Attack", true);
+        }
+        else
+        {
+            Animator.SetBool("Attack", false);
+        }
+    }
 }
 
     /*private void CheckForGround()

@@ -35,4 +35,7 @@ public class IanaCombate : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(controladorGolpe.position, radioGolpe);
     }
+
+    
+
 }
