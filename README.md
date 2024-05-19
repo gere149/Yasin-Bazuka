@@ -10,7 +10,7 @@ Deliverable 2:
 
 En esta update hemos cambiado varias cosas del proyecto.
 No hay lluvia de cocos y el borde de la pantalla no te elimina, pero hay una gran cantidad de enemigos que irán directos hacia ti para acabar contigo.
-Nuevo set de animaciones para el player (ataque y eliminación).
+Nuevo set de animaciones para el player (ataque (E) y eliminación).
 Implementación de un nuevo enemigo junto con su set de animaciones (movimiento, combate y eliminación).
 Implementación de un nuevo sistema de combate para el player.
 Implementación de 2 spawners de enemigos en ambos extremos de la pantalla.
