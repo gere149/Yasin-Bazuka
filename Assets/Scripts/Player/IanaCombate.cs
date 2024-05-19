@@ -8,6 +8,7 @@ public class IanaCombate : MonoBehaviour
     [SerializeField] private float radioGolpe;
     [SerializeField] private float dañoGolpe;
     
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -24,7 +25,7 @@ public class IanaCombate : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemy"))
             {
-                colisionador.GetComponent<Enemigo1>().TomarDaño(dañoGolpe);
+                colisionador.transform.GetComponent<Enemigo1>().TomarDaño(dañoGolpe);
             }
         }
     }
