@@ -25,8 +25,7 @@ public class E : MonoBehaviour
 
         if(informacionSuelo)
         {
-             Flip();
-
+            Flip();
         }
 
         

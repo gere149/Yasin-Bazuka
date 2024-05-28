@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4851688589298164360}
   - component: {fileID: 6944814762071665034}
   - component: {fileID: 8813992242593251423}
-  - component: {fileID: 7482459573672053727}
+  - component: {fileID: -4283856722510346526}
   m_Layer: 0
   m_Name: Rumano
   m_TagString: Enemy
@@ -259,7 +259,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7482459573672053727
+--- !u!114 &-4283856722510346526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,14 +268,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5959456025280060342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68f85fac2c088f24a8a112ebb24faa97, type: 3}
+  m_Script: {fileID: 11500000, guid: 7694ad19d70ab784f9bf0116443dc92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ani: {fileID: 8813992242593251423}
-  speed_run: 3
-  target: {fileID: 0}
-  rango_vision: 200
-  rango_ataque: 50
-  "cooldownDa\xF1o": 0.5
-  rango: {fileID: 5831906782375770411}
-  vida: 60
+  vida: 100
+  rb: {fileID: 0}
+  jugador: {fileID: 0}
+  controladorAtaque: {fileID: 0}
+  radioAtaque: 2
+  "da\xF1oAtaque": 20
