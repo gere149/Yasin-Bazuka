@@ -514,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controladorGolpe: {fileID: 560066659}
   radioGolpe: 1
-  "da\xF1oGolpe": 30
+  "da\xF1oGolpe": 35
 --- !u!114 &517176214
 MonoBehaviour:
   m_ObjectHideFlags: 0

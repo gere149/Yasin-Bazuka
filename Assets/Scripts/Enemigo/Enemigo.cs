@@ -21,8 +21,9 @@ public class Enemigo : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        rb = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Rigidbody2D>();
+        controladorAtaque = GameObject.FindGameObjectWithTag("ControladorAtaque").GetComponent<Transform>();
     } 
 
     private void Update()
