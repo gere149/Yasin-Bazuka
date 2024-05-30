@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &332133042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +315,6 @@ GameObject:
   - component: {fileID: 517176210}
   - component: {fileID: 517176211}
   - component: {fileID: 517176212}
-  - component: {fileID: 517176213}
   - component: {fileID: 517176214}
   m_Layer: 0
   m_Name: Iana
@@ -516,21 +515,6 @@ MonoBehaviour:
   controladorGolpe: {fileID: 560066659}
   radioGolpe: 1
   "da\xF1oGolpe": 30
---- !u!114 &517176213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517176204}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55acf99c4fbbed749889da66c9a3343e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 100
-  maxVida: 100
-  "da\xF1oQueRecibo": 10
 --- !u!114 &517176214
 MonoBehaviour:
   m_ObjectHideFlags: 0
