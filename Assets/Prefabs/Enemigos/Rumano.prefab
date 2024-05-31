@@ -90,7 +90,8 @@ GameObject:
   - component: {fileID: 4851688589298164360}
   - component: {fileID: 6944814762071665034}
   - component: {fileID: 8813992242593251423}
-  - component: {fileID: -4283856722510346526}
+  - component: {fileID: 1381272836521288741}
+  - component: {fileID: 2431193263822068936}
   m_Layer: 0
   m_Name: Rumano
   m_TagString: Enemy
@@ -178,7 +179,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 90
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -259,7 +260,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-4283856722510346526
+--- !u!114 &1381272836521288741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,12 +269,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 5959456025280060342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7694ad19d70ab784f9bf0116443dc92a, type: 3}
+  m_Script: {fileID: 11500000, guid: 94f791d13b6b0f0429e023be3d04fc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
-  rb: {fileID: 0}
-  jugador: {fileID: 0}
-  controladorAtaque: {fileID: 103800574926195344}
-  radioAtaque: 1
-  "da\xF1oAtaque": 20
+  moveSpeed: 4
+--- !u!114 &2431193263822068936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959456025280060342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c88b7abf70e4e4e8b67b4ba5fde911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  movementSpeed: 4
+  detectionDistance: 10
