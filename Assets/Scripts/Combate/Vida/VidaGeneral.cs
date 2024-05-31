@@ -5,6 +5,11 @@ using UnityEngine;
 public class VidaGeneral : MonoBehaviour
 {
     [SerializeField] private float vida;
+    private Animator animator;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void TomarDaño(float daño)
     {
@@ -12,7 +17,12 @@ public class VidaGeneral : MonoBehaviour
 
         if(vida <= 0)
         {
-            Destroy(gameObject);
+            Muerte();
         }
+    }
+    
+    private void Muerte()
+    {
+        animator.SetTrigger("Muerte");
     }
 }
