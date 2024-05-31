@@ -274,6 +274,6 @@ MonoBehaviour:
   vida: 100
   rb: {fileID: 0}
   jugador: {fileID: 0}
-  controladorAtaque: {fileID: 0}
-  radioAtaque: 2
+  controladorAtaque: {fileID: 103800574926195344}
+  radioAtaque: 1
   "da\xF1oAtaque": 20
