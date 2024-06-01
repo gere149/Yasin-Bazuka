@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 8813992242593251423}
   - component: {fileID: 1381272836521288741}
   - component: {fileID: 2431193263822068936}
+  - component: {fileID: 8890278903115073133}
+  - component: {fileID: 1319306737499968327}
   m_Layer: 0
   m_Name: Rumano
   m_TagString: Enemy
@@ -288,3 +290,28 @@ MonoBehaviour:
   moveSpeed: 4
   movementSpeed: 4
   detectionDistance: 10
+--- !u!114 &8890278903115073133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959456025280060342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216737ce79ef7ef4aa96b363799f6244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+--- !u!114 &1319306737499968327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959456025280060342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12814458509558d41b7f2388056284c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
