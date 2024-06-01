@@ -9,12 +9,15 @@ public class IanaVida : MonoBehaviour
     public float maxVida;
     public float dañoQueRecibo;
 
+    [SerializeField]private BarraDeVida barraDeVida;
+
     private Animator ani;
 
     void Start()
     {
         vida = maxVida;
         ani = GetComponent<Animator>();
+        barraDeVida.InicializarBarraDeVida(vida);
     }
 
     void Update()
@@ -39,5 +42,6 @@ public class IanaVida : MonoBehaviour
     public void IanaPierdeVida()
     {
         vida-= dañoQueRecibo;
+        barraDeVida.CambiarVidaActual(vida);
     }
 }
