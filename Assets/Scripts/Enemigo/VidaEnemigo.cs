@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControladorEnemigo : MonoBehaviour
+public class VidaEnemigo : MonoBehaviour
 {
 
     [SerializeField] private float vida;
-    private Animator animator;
+    private Animator ani;
     void Start()
     {
-        animator = GetComponent<Animator>();
+        ani = GetComponent<Animator>();
     }
 
     public void TomarDaño(float daño)
@@ -24,7 +24,15 @@ public class ControladorEnemigo : MonoBehaviour
     
     private void Muerte()
     {
-        animator.SetTrigger("Muerte");
+        if(vida <= 0)
+        {
+            ani.SetBool("Muerte", true);
+            
+        }
+        else
+        {
+            ani.SetBool("Muerte", false);
+        }
     }
 
 }

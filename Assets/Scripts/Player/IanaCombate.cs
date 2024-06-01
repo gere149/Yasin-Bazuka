@@ -25,7 +25,7 @@ public class IanaCombate : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemy"))
             {
-                colisionador.transform.GetComponent<Enemigo1>().TomarDaño(dañoGolpe);
+                colisionador.transform.GetComponent<VidaEnemigo>().TomarDaño(dañoGolpe);
             }
         }
     }
