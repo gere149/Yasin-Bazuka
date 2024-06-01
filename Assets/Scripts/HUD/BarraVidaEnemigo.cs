@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BarraVidaEnemigo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[Header("Model")]
+    [SerializeField] Enemigo1 health;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("View")]
+    [SerializeField] RectTransform healthUI;
+    [SerializeField] RectTransform healthBar;
+    [SerializeField] RectTransform healthValue;
+
+    
+
 }
