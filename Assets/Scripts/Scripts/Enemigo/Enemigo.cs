@@ -12,12 +12,23 @@ public class Enemigo : MonoBehaviour
     [Header("Vida")]
     [SerializeField] private float vida;
 
+    [Header("Ataque")]
+    [SerializeField] private Transform controladorAtaque;
+    [SerializeField] private float radioAtaque;
+    [SerializeField] private float dañoAtaque;
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
         jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    private void Update()
+    {
+        float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
+        animator.SetFloat("distanciaJugador", distanciaJugador);
     }
 
     public void TomarDaño(float daño)
@@ -42,5 +53,25 @@ public class Enemigo : MonoBehaviour
             mirandoDerecha = !mirandoDerecha;
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         }
+    }
+
+    //Intentar usar a partir de aqui el codigo y crear un Ataque general que sirva para CombateCac de player y Enemigo de enemy.
+    public void Ataque()
+    {
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorAtaque.position, radioAtaque);
+
+        foreach(Collider2D colision in objetos)
+        {
+            if(colision.CompareTag("Player"))
+            {
+                colision.GetComponent<VidaDelJugador>().TomarDaño(dañoAtaque);
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(controladorAtaque.position, radioAtaque);
     }
 }
