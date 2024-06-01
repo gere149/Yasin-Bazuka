@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IanaCombate : MonoBehaviour
 {
-    [SerializeField] private Transform controladorGolpe;
+    /*[SerializeField] private Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
     [SerializeField] private float dañoGolpe;
     
@@ -34,7 +34,7 @@ public class IanaCombate : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(controladorGolpe.position, radioGolpe);
-    }
+    }*/
 
     
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IanaVida : MonoBehaviour
 {
-    public float vida;
+    /*public float vida;
     public float maxVida;
     public float dañoQueRecibo;
 
@@ -43,5 +43,5 @@ public class IanaVida : MonoBehaviour
     {
         vida-= dañoQueRecibo;
         barraDeVida.CambiarVidaActual(vida);
-    }
+    }*/
 }

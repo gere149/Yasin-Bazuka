@@ -14,7 +14,7 @@ public class VidaEnemigo : MonoBehaviour
 
     public int CurrentHealth { get => currentHealth; set => currentHealth = value; }
     public int MinHealth => minHealth;
-    public int MaxHealth => maxHealth;*/
+    public int MaxHealth => maxHealth;
     [SerializeField] private float vida;
     private Animator animator;
     private Transform playerTransform;
@@ -26,11 +26,11 @@ public class VidaEnemigo : MonoBehaviour
 
     }
 
-    /*public void Decrement(int amount)
+    public void Decrement(int amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, minHealth, maxHealth);
-    }*/
+    }
 
     public void TomarDaño(float daño)
     {
@@ -46,6 +46,6 @@ public class VidaEnemigo : MonoBehaviour
     {
         animator.SetTrigger("Muerte");
         Destroy(gameObject);
-    }
+    }*/
 
 }
