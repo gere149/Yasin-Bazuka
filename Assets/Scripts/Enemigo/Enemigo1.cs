@@ -16,7 +16,6 @@ public class Enemigo1 : MonoBehaviour
     public float cooldownDaño;
     private float momentoDaño;
     public GameObject rango;
-    [SerializeField] private float vida;
 
     void Start()
     {
@@ -66,15 +65,6 @@ public class Enemigo1 : MonoBehaviour
         } 
        
     }
-    public void TomarDaño(float daño)
-    {
-        vida -= daño;
-
-        if(vida <= 0)
-        {
-            Muerte();
-        }
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -104,18 +94,6 @@ public class Enemigo1 : MonoBehaviour
         
     }
     
-    private void Muerte()
-    {
-        if(vida <= 0)
-        {
-            ani.SetBool("Muerte", true);
-            Destroy(this.GameObject(), 1);
-        }
-        else
-        {
-            ani.SetBool("Muerte", false);
-        }
-    }
 
     private void Final_Ani()
     {

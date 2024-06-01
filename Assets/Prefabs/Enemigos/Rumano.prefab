@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6944814762071665034}
   - component: {fileID: 8813992242593251423}
   - component: {fileID: 7482459573672053727}
+  - component: {fileID: 3363739215885296092}
   m_Layer: 0
   m_Name: Rumano
   m_TagString: Enemy
@@ -278,4 +279,17 @@ MonoBehaviour:
   rango_ataque: 50
   "cooldownDa\xF1o": 0.5
   rango: {fileID: 5831906782375770411}
+  vida: 0
+--- !u!114 &3363739215885296092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959456025280060342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cc4e38c00d63e46a40d863108181b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   vida: 60
