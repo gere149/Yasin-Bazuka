@@ -11,6 +11,9 @@ public class Enemigo : MonoBehaviour
 
     [Header("Vida")]
     [SerializeField] private float vida;
+    private float vidaMax = 100;
+    public SpriteRenderer healthBar;
+    public Transform healthBarTransform;
 
     [Header("Ataque")]
     [SerializeField] private Transform controladorAtaque;
@@ -29,6 +32,10 @@ public class Enemigo : MonoBehaviour
     {
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
         animator.SetFloat("distanciaJugador", distanciaJugador);
+
+        float healthPercentage = (float)vida / vidaMax;
+        healthBarTransform.transform.localScale = new Vector3(healthPercentage * 0.5f, 0.06810274f, 1f);
+        healthBar.color = Color.Lerp(Color.red, Color.green, healthPercentage);
     }
 
     public void TomarDaño(float daño)
@@ -38,12 +45,13 @@ public class Enemigo : MonoBehaviour
         if(vida <= 0)
         {
             animator.SetTrigger("Muerte 0");
+            Muerte(1);
         }
     }
 
-    private void Muerte()
+    private void Muerte(int time)
     {
-        Destroy(gameObject);
+        Destroy(gameObject, time);
     }
 
     public void MirarJugador()

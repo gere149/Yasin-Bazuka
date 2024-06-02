@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class BarraDeVida : MonoBehaviour
 {
-    private Slider slider;
+    public Slider slider;
 
     private void Start()
     {
-        slider = GetComponent <Slider>();
+        
     }
 
     public void CambiarVidaActual(float cantidadVida)
