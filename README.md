@@ -21,3 +21,14 @@ Va a haber varios cambios en las implementaciones previamente mencionadas y nuev
 En un futuro, tenemos pensado hacer nuevos tipos de enemigos con diferentes características y cualidades únicas.
 También un cronómetro que, a medida que avance el tiempo, haga que el juego se vuelva más complicado.
 
+Deliverable 3:
+
+En esta actualización de Yasin Bazuka hemos implementado todo lo relacionado con el UI y el HUD para aportar información al usuario sobre la partida.
+Implementación de una barra de vida estática que muestra la vida de nuestro personaje.
+Implementación de barras de vida sobre los enemigos que muestra su vida actual.
+Implementación de un menú de pausa para pausar, reiniciar y abandonar partida.
+Implementación del Main Menu donde se puede elegir si configurar las opciones, iniciar partida o abandonar el juego.
+
+Con todas estas Updates el juego mantiene su objetivo inicial de ser un Beat'em Up donde el jugar tiene que sobrevivir a una oleada constante de enemigos.
+Ahora con una mejora de la interfaz de Usuario para mostrar información necesaria para la partida.
+En próximas Updates se implementará un reloj que haga que a medida que avance el tiempo el juego se vuelva más complicado, con más enemigos, y varios detalles que mejorarán la experiencia de juego.
