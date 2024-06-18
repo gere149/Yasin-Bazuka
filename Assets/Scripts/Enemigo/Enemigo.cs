@@ -6,6 +6,49 @@ public class Enemigo : MonoBehaviour
 {
     private Animator animator;
     public Rigidbody2D rb2D;
+    private Transform jugador;
+    private bool mirandoDerecha = true;
+
+    [Header("Componentes")]
+    public SpriteRenderer healthBar;
+    public Transform healthBarTransform;
+
+    
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb2D = GetComponent<Rigidbody2D>();
+        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+    }
+
+    private void Update()
+    {
+        float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
+        animator.SetFloat("distanciaJugador", distanciaJugador);
+    }
+
+    public void Morir()
+    {
+        animator.SetTrigger("Muerte 0");
+        Destroy(gameObject, 1f);
+    }
+
+    public void MirarJugador()
+    {
+        if ((jugador.position.x > transform.position.x && !mirandoDerecha) || (jugador.position.x < transform.position.x && mirandoDerecha))
+        {
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
+    }
+
+
+
+
+    /*private Animator animator;
+    public Rigidbody2D rb2D;
     public Transform jugador;
     private bool mirandoDerecha = true;
 
@@ -86,5 +129,5 @@ public class Enemigo : MonoBehaviour
         porcentajeVida = (float)vida / vidaMax;
         healthBarTransform.transform.localScale = new Vector3(porcentajeVida * 0.5f, 0.06810274f, 1f);
         healthBar.color = Color.Lerp(Color.red, Color.green, porcentajeVida);
-    }
+    }*/
 }

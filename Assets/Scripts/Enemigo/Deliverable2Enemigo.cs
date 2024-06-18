@@ -5,9 +5,9 @@ using Unity.VisualScripting;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Enemigo1 : MonoBehaviour
+/*public class EnemigoDeliverable2 : MonoBehaviour
 {
-    /*public Animator ani;
+    public Animator ani;
     public float speed_run;
     public GameObject target;
     private bool atacando;
@@ -105,8 +105,8 @@ public class Enemigo1 : MonoBehaviour
     public void LlamadaAni()
     {
         Final_Ani();
-    }*/
+    }
 
 
     
-}
+}*/

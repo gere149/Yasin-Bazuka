@@ -205,7 +205,9 @@ GameObject:
   - component: {fileID: 4313418392895024915}
   - component: {fileID: 2282355359171358877}
   - component: {fileID: 802318949417833173}
-  - component: {fileID: 1385654631308400041}
+  - component: {fileID: 858010615862622409}
+  - component: {fileID: 4593947120476807391}
+  - component: {fileID: 4657153686969495638}
   m_Layer: 0
   m_Name: Rumano
   m_TagString: Enemy
@@ -376,7 +378,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1385654631308400041
+--- !u!114 &858010615862622409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,11 +390,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df04d9909aad39b47b949986b2b67d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 0}
+  rb2D: {fileID: 4313418392895024915}
   jugador: {fileID: 0}
+  healthBar: {fileID: 4429681861170809518}
+  healthBarTransform: {fileID: 2882533225800841182}
+  vidaEnemigo: {fileID: 4593947120476807391}
+  combateEnemigo: {fileID: 4657153686969495638}
+--- !u!114 &4593947120476807391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7926183540305397106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e69d31643e17849a68641b5d9ca65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   vida: 100
   healthBar: {fileID: 4429681861170809518}
   healthBarTransform: {fileID: 2882533225800841182}
+--- !u!114 &4657153686969495638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7926183540305397106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111c4be05dcb0f74fafaf07bae9191b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   controladorAtaque: {fileID: 2799787016329121129}
   radioAtaque: 1
   "da\xF1oAtaque": 20

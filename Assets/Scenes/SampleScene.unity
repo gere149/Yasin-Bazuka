@@ -6521,6 +6521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4657153686969495638, guid: 0d3978fae0cdfec4894e68db189d51f2, type: 3}
+      propertyPath: "da\xF1oAtaque"
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7926183540305397106, guid: 0d3978fae0cdfec4894e68db189d51f2, type: 3}
       propertyPath: m_Name
       value: Rumano
