@@ -5,6 +5,8 @@ using System;
 
 public class VidaDelJugador : MonoBehaviour
 {
+    private Animator animator;
+    private Rigidbody2D rb2D;
     [SerializeField] private float vida;
     [SerializeField] private BarraDeVida barraDeVida;
 
@@ -12,6 +14,8 @@ public class VidaDelJugador : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        rb2D = GetComponent<Rigidbody2D>();
         barraDeVida.InicializarBarraDeVida(vida);
     }
 
@@ -23,8 +27,13 @@ public class VidaDelJugador : MonoBehaviour
 
         if(vida <= 0)
         {
-            MuerteJugador?.Invoke(this, EventArgs.Empty);
-            Destroy(gameObject);
+            rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            animator.SetTrigger("Muerte");
         }
+    }
+
+    public void MuerteJugadorEvento()
+    {
+        MuerteJugador?.Invoke(this, EventArgs.Empty);
     }
 }
