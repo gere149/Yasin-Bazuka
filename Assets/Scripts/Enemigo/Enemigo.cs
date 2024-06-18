@@ -33,9 +33,7 @@ public class Enemigo : MonoBehaviour
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
         animator.SetFloat("distanciaJugador", distanciaJugador);
 
-        float healthPercentage = (float)vida / vidaMax;
-        healthBarTransform.transform.localScale = new Vector3(healthPercentage * 0.5f, 0.06810274f, 1f);
-        healthBar.color = Color.Lerp(Color.red, Color.green, healthPercentage);
+        ActualizarBarraDeVida(vida);
     }
 
     public void TomarDaño(float daño)
@@ -81,5 +79,12 @@ public class Enemigo : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(controladorAtaque.position, radioAtaque);
+    }
+
+    private void ActualizarBarraDeVida(float porcentajeVida)
+    {
+        porcentajeVida = (float)vida / vidaMax;
+        healthBarTransform.transform.localScale = new Vector3(porcentajeVida * 0.5f, 0.06810274f, 1f);
+        healthBar.color = Color.Lerp(Color.red, Color.green, porcentajeVida);
     }
 }
