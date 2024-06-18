@@ -967,6 +967,7 @@ GameObject:
   - component: {fileID: 517176211}
   - component: {fileID: 517176212}
   - component: {fileID: 517176213}
+  - component: {fileID: 517176214}
   m_Layer: 0
   m_Name: Iana
   m_TagString: Player
@@ -1148,9 +1149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da24e928b340bd4b91cfc6c339af1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capaSuelo:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &517176212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1180,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   barraDeVida: {fileID: 1038182441}
+--- !u!114 &517176214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517176204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868aa469aab977847becea6dc6b8b9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 517176207}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,7 +3197,7 @@ GameObject:
   - component: {fileID: 1157968515}
   - component: {fileID: 1157968514}
   - component: {fileID: 1511930246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

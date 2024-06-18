@@ -7,6 +7,32 @@ public class IanaMov : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
+    private Animator animator;
+    private MovimientoGeneral movementController;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        movementController = GetComponent<MovimientoGeneral>();
+    }
+
+    void Update()
+    {
+        horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetBool("running", horizontal != 0.0f);
+        animator.SetFloat("jumpVelocidad", movementController.rb2D.velocity.y); 
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            movementController.Jump(jumpingPower);
+        }
+
+        movementController.Move(horizontal * speed);
+    }
+
+    /*private float horizontal;
+    private float speed = 8f;
+    private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Animator Animator;
     private Rigidbody2D rb;
@@ -63,7 +89,7 @@ public class IanaMov : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, capaSuelo);
         return raycastHit.collider != null;
-    }
+    }*/
     
 }
 
