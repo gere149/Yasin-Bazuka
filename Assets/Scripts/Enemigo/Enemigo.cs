@@ -6,43 +6,20 @@ public class Enemigo : MonoBehaviour
 {
     private Animator animator;
     public Rigidbody2D rb2D;
-    private Transform jugador;
     private bool mirandoDerecha = true;
 
-    [Header("Componentes")]
-    public SpriteRenderer healthBar;
-    public Transform healthBarTransform;
-
-    
-
-    private void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-        BuscarJugador();        
     }
 
-    private void Update()
+    void Update()
     {
-        if(jugador != null)
-        {
-            float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
-            animator.SetFloat("distanciaJugador", distanciaJugador);
-            MirarJugador();
-        }
-        else
-        {
-            BuscarJugador();
-        }
-    }
-
-    private void BuscarJugador()
-    {
-        GameObject jugadorObj = GameObject.FindGameObjectWithTag("Player");
-        if (jugadorObj != null)
-        {
-            jugador = jugadorObj.transform;
-        }
+        Vector3 targetPosition = GameManager.instance.GetTargetLocation();
+        float distanciaJugador = Vector2.Distance(transform.position, targetPosition);
+        animator.SetFloat("distanciaJugador", distanciaJugador);
+        MirarJugador();
     }
 
     public void Morir()
@@ -51,21 +28,14 @@ public class Enemigo : MonoBehaviour
         Destroy(gameObject, 1f);
     }
 
-    public void MirarJugador()
+    void MirarJugador()
     {
-        if (jugador != null)
+        Vector3 targetPosition = GameManager.instance.GetTargetLocation();
+        if ((targetPosition.x > transform.position.x && !mirandoDerecha) || (targetPosition.x < transform.position.x && mirandoDerecha))
         {
-            if ((jugador.position.x > transform.position.x && !mirandoDerecha) || (jugador.position.x < transform.position.x && mirandoDerecha))
-            {
-                mirandoDerecha = !mirandoDerecha;
-                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
-            }
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         }
-    }
-
-    public Transform GetJugador()
-    {
-        return jugador;
     }
 
 

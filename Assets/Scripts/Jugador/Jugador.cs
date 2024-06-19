@@ -11,6 +11,6 @@ public class Jugador : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.instance.UnregisterPlayer();
+        GameManager.instance.UnregisterPlayer(this);
     }
 }

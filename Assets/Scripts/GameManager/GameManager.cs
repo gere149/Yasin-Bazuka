@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
         registeredPlayer = player;
     }
 
-    public void UnregisterPlayer()
+    public void UnregisterPlayer(Jugador player)
     {
-        registeredPlayer = null;
+        if (registeredPlayer == player)
+        {
+            registeredPlayer = null;
+        }
     }
 
     public Vector3 GetTargetLocation()
