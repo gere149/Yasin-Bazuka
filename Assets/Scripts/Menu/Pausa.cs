@@ -24,7 +24,6 @@ public class Pausa : MonoBehaviour
             }
 
             Time.timeScale = 0;
-            Cursor.visible = true;
         }
     }
 
@@ -34,9 +33,6 @@ public class Pausa : MonoBehaviour
         pausa = false;
 
         Time.timeScale = 1;
-        Cursor.visible = false;
-
-
     }
     
     public void Reiniciar()
