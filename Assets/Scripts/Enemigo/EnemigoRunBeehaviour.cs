@@ -12,8 +12,10 @@ public class EnemigoRunBeehaviour : StateMachineBehaviour
     {
         enemigo = animator.GetComponent<Enemigo>();
         rb2D = enemigo.rb2D;
-
-        enemigo.MirarJugador();
+        if (enemigo != null && enemigo.GetJugador() != null)
+        {
+            enemigo.MirarJugador();
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

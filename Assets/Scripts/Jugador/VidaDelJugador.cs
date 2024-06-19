@@ -35,5 +35,6 @@ public class VidaDelJugador : MonoBehaviour
     public void MuerteJugadorEvento()
     {
         MuerteJugador?.Invoke(this, EventArgs.Empty);
+        Destroy(gameObject);
     }
 }

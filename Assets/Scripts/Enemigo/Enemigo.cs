@@ -19,14 +19,30 @@ public class Enemigo : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
-        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
+        BuscarJugador();        
     }
 
     private void Update()
     {
-        float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
-        animator.SetFloat("distanciaJugador", distanciaJugador);
+        if(jugador != null)
+        {
+            float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
+            animator.SetFloat("distanciaJugador", distanciaJugador);
+            MirarJugador();
+        }
+        else
+        {
+            BuscarJugador();
+        }
+    }
+
+    private void BuscarJugador()
+    {
+        GameObject jugadorObj = GameObject.FindGameObjectWithTag("Player");
+        if (jugadorObj != null)
+        {
+            jugador = jugadorObj.transform;
+        }
     }
 
     public void Morir()
@@ -37,11 +53,19 @@ public class Enemigo : MonoBehaviour
 
     public void MirarJugador()
     {
-        if ((jugador.position.x > transform.position.x && !mirandoDerecha) || (jugador.position.x < transform.position.x && mirandoDerecha))
+        if (jugador != null)
         {
-            mirandoDerecha = !mirandoDerecha;
-            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+            if ((jugador.position.x > transform.position.x && !mirandoDerecha) || (jugador.position.x < transform.position.x && mirandoDerecha))
+            {
+                mirandoDerecha = !mirandoDerecha;
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+            }
         }
+    }
+
+    public Transform GetJugador()
+    {
+        return jugador;
     }
 
 

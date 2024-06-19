@@ -9,6 +9,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject menuGameOver;
     private VidaDelJugador vidaJugador;
 
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         vidaJugador = GameObject.FindGameObjectWithTag("Player").GetComponent<VidaDelJugador>();
