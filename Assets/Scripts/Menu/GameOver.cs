@@ -32,7 +32,6 @@ public class GameOver : MonoBehaviour
 
     public void Salir()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
