@@ -32,6 +32,7 @@ public class GameOver : MonoBehaviour
 
     public void Salir()
     {
+        Debug.Log("Saliendo...");
         Application.Quit();
     }
 }
