@@ -2295,8 +2295,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088455915}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1088455920}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: Salir
         m_Mode: 1
         m_Arguments:
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 1088455918}
   - component: {fileID: 1088455917}
   - component: {fileID: 1088455916}
-  - component: {fileID: 1088455915}
+  - component: {fileID: 1088455920}
   m_Layer: 5
   m_Name: CanvasGameOver
   m_TagString: Untagged
@@ -2784,19 +2784,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1088455915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088455914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce839a9048b66ac4eb5af0628e0dfeed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuGameOver: {fileID: 4936510}
 --- !u!114 &1088455916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,6 +2867,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1088455920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088455914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223a5e7875782a74c9379dcdbc62fad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuGameOver: {fileID: 4936510}
 --- !u!1 &1110791843
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,8 +3144,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088455915}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1088455920}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
         m_Arguments:
@@ -4008,8 +4008,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088455915}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1088455920}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: MenuInicial
         m_Mode: 5
         m_Arguments:

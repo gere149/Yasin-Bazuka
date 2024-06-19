@@ -6,16 +6,16 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject menuGameOver;
-    private VidaDelJugador vidaJugador;
-
     public static GameManager instance;
+    private Jugador registeredPlayer;
+    private Vector3 lastKnownPosition;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -23,30 +23,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void RegisterPlayer(Jugador player)
     {
-        vidaJugador = GameObject.FindGameObjectWithTag("Player").GetComponent<VidaDelJugador>();
-        vidaJugador.MuerteJugador += ActivarMenu;
+        registeredPlayer = player;
     }
 
-    private void ActivarMenu(object sender, EventArgs e)
+    public void UnregisterPlayer()
     {
-        menuGameOver.SetActive(true);
+        registeredPlayer = null;
     }
 
-    public void Reiniciar()
+    public Vector3 GetTargetLocation()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void MenuInicial(string nombre)
-    {
-        SceneManager.LoadScene(nombre);
-    }
-
-    public void Salir()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
+        if (registeredPlayer != null)
+        {
+            lastKnownPosition = registeredPlayer.transform.position;
+        }
+        return lastKnownPosition;
     }
 }
