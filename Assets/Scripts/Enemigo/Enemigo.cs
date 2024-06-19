@@ -7,11 +7,13 @@ public class Enemigo : MonoBehaviour
     private Animator animator;
     public Rigidbody2D rb2D;
     private bool mirandoDerecha = true;
+    private MovimientoGeneral movimientoGeneral;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+        movimientoGeneral = GetComponent<MovimientoGeneral>();
     }
 
     void Update()
