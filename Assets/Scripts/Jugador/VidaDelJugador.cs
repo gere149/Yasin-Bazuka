@@ -9,8 +9,8 @@ public class VidaDelJugador : MonoBehaviour
     private Rigidbody2D rb2D;
     [SerializeField] private float vida;
     [SerializeField] private BarraDeVida barraDeVida;
-
     public event EventHandler MuerteJugador;
+    public Cronometro cronometro;
 
     private void Start()
     {
@@ -28,7 +28,8 @@ public class VidaDelJugador : MonoBehaviour
         if(vida <= 0)
         {
             rb2D.constraints = RigidbodyConstraints2D.FreezeAll;
-            animator.SetTrigger("Muerte");
+            animator.SetTrigger("Muerte");   
+            cronometro.DetenerCronometro();
         }
     }
 

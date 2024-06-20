@@ -1341,6 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   barraDeVida: {fileID: 1038182441}
+  cronometro: {fileID: 413748288}
 --- !u!114 &517176214
 MonoBehaviour:
   m_ObjectHideFlags: 0
