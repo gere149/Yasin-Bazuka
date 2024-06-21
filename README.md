@@ -36,12 +36,12 @@ En próximas Updates se implementará un reloj que haga que a medida que avance 
 Deliverable 4:
 
 En esta actualización de Yasin Bazuka hemos implementado nuevas características al gameplay, entre ellas:
-Implementación de un cronómetro que indica el tiempo que sobrevives y se detiene cuando mueres, lo cual hace que puedas superarte cada vez que inicies una partida nueva.
-Implementación del menú de gameover, el cual se abre cuando pierdes la partida
+Implementación de un cronómetro, que indica el tiempo que sobrevives y se detiene cuando mueres, lo cual hace que puedas superarte cada vez que inicies una partida nueva.
+Implementación del menú de gameover, el cual se abre cuando pierdes la partida.
 Implementación de música para el juego.
 
 Esta actualización ha sido enfocada principalmente a la limpieza y organización del proyecto y la refactorización del código del mismo.
-Implementación de un GameManager evitando posibles crasheos cuando el jugador muere.
+Implementación de un GameManager, evitando posibles crasheos cuando el jugador muere.
 Implementación de un Script de movimiento general, encargado de realizar las fuerzas, cambios de sentido, detectar el suelo...
 
 
