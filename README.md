@@ -32,3 +32,17 @@ Implementación del Main Menu donde se puede elegir si configurar las opciones, 
 Con todas estas Updates el juego mantiene su objetivo inicial de ser un Beat'em Up donde el jugar tiene que sobrevivir a una oleada constante de enemigos.
 Ahora con una mejora de la interfaz de Usuario para mostrar información necesaria para la partida.
 En próximas Updates se implementará un reloj que haga que a medida que avance el tiempo el juego se vuelva más complicado, con más enemigos, y varios detalles que mejorarán la experiencia de juego.
+
+Deliverable 4:
+
+En esta actualización de Yasin Bazuka hemos implementado nuevas características al gameplay, entre ellas:
+Implementación de un cronómetro que indica el tiempo que sobrevives y se detiene cuando mueres, lo cual hace que puedas superarte cada vez que inicies una partida nueva.
+Implementación del menú de gameover, el cual se abre cuando pierdes la partida
+Implementación de música para el juego.
+
+Esta actualización ha sido enfocada principalmente a la limpieza y organización del proyecto y la refactorización del código del mismo.
+Implementación de un GameManager evitando posibles crasheos cuando el jugador muere.
+Implementación de un Script de movimiento general, encargado de realizar las fuerzas, cambios de sentido, detectar el suelo...
+
+
+
